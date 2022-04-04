@@ -6,7 +6,6 @@
   "scripts": {
     "start": " node app.js",
     "devStart": "nodemon server.js"
-    "postinstall": "node ./scripts/post-install.js"
 
   },
   "repository": {
