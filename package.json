@@ -1,0 +1,45 @@
+{
+  "name": "mystoryapp",
+  "version": "1.0.0",
+  "description": "A Public and Private Story App",
+  "main": "app.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node app",
+    "dev": "cross-env NODE_ENV=development nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Temitopesam1/my-DIY-Blog.git"
+  },
+  "keywords": [
+    "Story",
+    "App",
+    "node",
+    "express",
+    "mongodb"
+  ],
+  "author": "Temitope Sam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Temitopesam1/my-DIY-Blog/issues"
+  },
+  "homepage": "https://github.com/Temitopesam1/my-DIY-Blog#readme",
+  "dependencies": {
+    "connect-mongo": "^4.6.0",
+    "connect-mongodb-session": "^3.1.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.3",
+    "express-session": "^1.17.2",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.1",
+    "mongoose": "^6.2.9",
+    "morgan": "^1.10.0",
+    "passport": "^0.5.2",
+    "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.15"
+  }
+}
