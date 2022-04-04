@@ -4,9 +4,8 @@
   "description": "A Public and Private Story App",
   "main": "app.js",
   "scripts": {
-    "start": " node app.js",
-    "devStart": "nodemon server.js"
-
+    "start": "cross-env NODE_ENV=production node app",
+    "dev": "cross-env NODE_ENV=development nodemon app"
   },
   "repository": {
     "type": "git",
@@ -27,6 +26,7 @@
   "homepage": "https://github.com/Temitopesam1/my-DIY-Blog#readme",
   "dependencies": {
     "connect-mongo": "^4.6.0",
+    "connect-mongodb-session": "^3.1.1",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "express-handlebars": "^6.0.3",
