@@ -7,7 +7,7 @@ const methodOverride = require("method-override")
 const passport = require("passport")
 const session = require("express-session")
 const MongoStore = require("connect-mongo")
-//const connectDB = require("./config/db")
+const connectDB = require("./config/db")
 const exphbs = require("express-handlebars")
 
 
@@ -17,18 +17,7 @@ dotenv.config({ path: "./config/config.env" })
 // passport config
 require("./config/passport")(passport)
 
-// connectDB()
-
-
-mongoose.connect(process.env.DATABASE_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
-const db = mongoose.connection
-db.on("error", error => console.error(error))
-db.once("open", () => console.log("Connected to Mongoose"))
-
-
+connectDB()
 
 const app = express()
 
@@ -37,14 +26,17 @@ app.use(express.urlencoded({ extended: false}))
 app.use(express.json())
 
 // Method Override
-app.use(methodOverride(function (req, res) {
-    if (req.body && typeof req.body === 'object' && '_method' in req.body) {
-      // look in urlencoded POST bodies and delete it
-      var method = req.body._method
-      delete req.body._method
-      return method
-    }
-  }))
+app.use(
+    methodOverride(function (req, res) {
+      if (req.body && typeof req.body === 'object' && '_method' in req.body) {
+        // look in urlencoded POST bodies and delete it
+        let method = req.body._method
+        delete req.body._method
+        return method
+      }
+    })
+  )
+
 // Logging
 if (process.env.NODE_ENV === "development") {
     app.use(morgan("dev"))
