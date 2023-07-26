@@ -12,7 +12,7 @@ const exphbs = require("express-handlebars")
 
 
 // load config
-dotenv.config({ path: "./config/config.env" })
+dotenv.config({ path: "./config/conf.env" })
 
 // passport config
 require("./config/passport")(passport)
