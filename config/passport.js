@@ -8,6 +8,9 @@ module.exports = function (passport) {
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
         callbackURL: 'https://mystorybook.onrender.com/auth/google/callback',
+        scope: 'https://www.googleapis.com/auth/userinfo.profile',
+        access_type: 'online',
+        response_type: 'code'
       },
       async (accessToken, refreshToken, profile, done) => {
         const newUser = {
