@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/Temitopesam1/my-DIY-Blog#readme",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "connect-mongo": "^4.6.0",
     "connect-mongodb-session": "^3.1.1",
     "dotenv": "^16.0.0",
@@ -36,7 +37,8 @@
     "mongoose": "^6.2.9",
     "morgan": "^1.10.0",
     "passport": "^0.5.2",
-    "passport-google-oauth20": "^2.0.0"
+    "passport-google-oauth20": "^2.0.0",
+    "validator": "^13.9.0"
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
