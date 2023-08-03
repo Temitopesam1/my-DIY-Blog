@@ -1,6 +1,5 @@
 const express = require("express")
 const path = require("path")
-const mongoose = require("mongoose")
 const dotenv = require("dotenv")
 const morgan = require("morgan")
 const methodOverride = require("method-override")
@@ -9,17 +8,24 @@ const session = require("express-session")
 const MongoStore = require("connect-mongo")
 const connectDB = require("./config/db")
 const exphbs = require("express-handlebars")
+const helpers = require('./helpers/helper');
+
+// Register the custom Handlebars helper
+helpers.registerHelper();
+
 
 
 // load config
 dotenv.config({ path: "./config/conf.env" })
 
 // passport config
+// require("./config/passport")
 require("./config/passport")(passport)
 
 connectDB()
 
 const app = express()
+
 
 // Body parser
 app.use(express.urlencoded({ extended: false}))
@@ -56,7 +62,7 @@ app.set("view engine", ".hbs")
 
 // Sessions
 app.use(session({
-    secret: "keyboard cat",
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false,
     store: MongoStore.create({ mongoUrl: process.env.DATABASE_URI })

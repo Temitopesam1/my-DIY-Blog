@@ -43,7 +43,7 @@ body, h1, h2, h3, h4, h5, h6, p, i {
     flex: 1 1;
     border-top: 1px solid #cbd5de;
 }
-*, :after, :before {
+/* *, :after, :before {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
 }
@@ -51,7 +51,7 @@ body, h1, h2, h3, h4, h5, h6, p, i {
 *, :after, :before {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-}
+} */
 .tabbed-pane_tabbed-pane__2DfHq {
     margin-left: auto;
     margin-right: auto;
@@ -127,14 +127,7 @@ body, h1, h2, h3, h4, h5, h6, p {
     border-top: 1px solid #cbd5de;
 }
 
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
+
 .tabbed-pane_tabbed-pane__2DfHq {
     margin-left: auto;
     margin-right: auto;
@@ -203,14 +196,7 @@ a {
     flex: 1 1;
     border-top: 1px solid #cbd5de;
 }
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
+
 
 .or-separator_contain__3YaFK:after, .or-separator_contain__3YaFK:before {
     content: "";
@@ -218,14 +204,7 @@ a {
     flex: 1 1;
     border-top: 1px solid #cbd5de;
 }
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
+
 .tabbed-pane_tabbed-pane__2DfHq {
     margin-left: auto;
     margin-right: auto;
@@ -649,14 +628,7 @@ textarea {
     font-size: 26px;
     font-size: 1.625rem;
 }
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
+
 .app_brandRefresh__SbajM .vds-button.vds-button--primary {
     background-color: #2015ff;
     border-radius: 4px;
@@ -686,14 +658,7 @@ textarea {
     border-top: 1px solid #cbd5de;
 }
 
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
+
 .or-separator_contain__3YaFK:after, .or-separator_contain__3YaFK:before {
     content: "";
     -ms-flex: 1 1;
@@ -738,14 +703,7 @@ img {
     vertical-align: middle;
 }
 
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
+
 
 .vds-form-fieldset:last-child, .vds-form-fieldset>:last-child, .vds-form-fieldset>:last-child>:last-child, .vds-form-fieldset>:last-child>:last-child>:last-child {
     margin-bottom: 0;
@@ -820,18 +778,7 @@ blockquote, h1, h2, h3, h4, h5, h6, p, pre {
 body, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
-body * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
+
 
 user agent stylesheet
 :not(svg) {
@@ -865,35 +812,7 @@ i {
     line-height: 26px;
     line-height: 1.625rem;
 }
-.vds-button {
-    height: 3rem;
-    padding: 0 1rem;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: #fff;
-    border: transparent;
-    border-radius: 0.5rem;
-    color: #11161a;
-    cursor: pointer;
-    display: inline-block;
-    font-family: "Open Sans",sans-serif;
-    font-size: .75rem;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    line-height: 1.5rem;
-    text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    vertical-align: middle;
-}
+
 
 user agent stylesheet
 
@@ -952,37 +871,10 @@ html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-body ::selection {
-    background: rgba(164,228,245,.4);
-}
-body * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
+
+
+
+
 /* g[Attributes Style] {
     fill: none;
 } */
@@ -1018,35 +910,6 @@ i {
     line-height: 26px;
     line-height: 1.625rem;
 }
-.vds-button {
-    height: 3rem;
-    padding: 0 1rem;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: #fff;
-    border: transparent;
-    border-radius: 0.5rem;
-    color: #11161a;
-    cursor: pointer;
-    display: inline-block;
-    font-family: "Open Sans",sans-serif;
-    font-size: .75rem;
-    font-weight: 600;
-    letter-spacing: 1.5px;
-    line-height: 1.5rem;
-    text-transform: uppercase;
-    text-align: center;
-    text-decoration: none;
-    -webkit-transition: all .3s ease;
-    -o-transition: all .3s ease;
-    transition: all .3s ease;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    vertical-align: middle;
-}
 
 user agent stylesheet
 
@@ -1105,25 +968,8 @@ html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-body ::selection {
-    background: rgba(164,228,245,.4);
-}
+
+
 
 .tabbed-pane_tabbed-pane__2DfHq {
     margin-left: auto;
@@ -1179,18 +1025,8 @@ blockquote, h1, h2, h3, h4, h5, h6, p, pre {
 body, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
-body * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
+
+
 user agent stylesheet
 h1 {
     display: block;
@@ -1373,25 +1209,7 @@ html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-body ::selection {
-    background: rgba(164,228,245,.4);
-}
+
 
 
 .verify-email_vds-spacing__2D7tg blockquote, .verify-email_vds-spacing__2D7tg h1, .verify-email_vds-spacing__2D7tg h2, .verify-email_vds-spacing__2D7tg h3, .verify-email_vds-spacing__2D7tg h4, .verify-email_vds-spacing__2D7tg h5, .verify-email_vds-spacing__2D7tg h6, .verify-email_vds-spacing__2D7tg p, .verify-email_vds-spacing__2D7tg pre, blockquote:last-child, blockquote>:last-child, blockquote>:last-child>:last-child, blockquote>:last-child>:last-child>:last-child, h1:last-child, h1>:last-child, h1>:last-child>:last-child, h1>:last-child>:last-child>:last-child, h2:last-child, h2>:last-child, h2>:last-child>:last-child, h2>:last-child>:last-child>:last-child, h3:last-child, h3>:last-child, h3>:last-child>:last-child, h3>:last-child>:last-child>:last-child, h4:last-child, h4>:last-child, h4>:last-child>:last-child, h4>:last-child>:last-child>:last-child, h5:last-child, h5>:last-child, h5>:last-child>:last-child, h5>:last-child>:last-child>:last-child, h6:last-child, h6>:last-child, h6>:last-child>:last-child, h6>:last-child>:last-child>:last-child, p:last-child, p>:last-child, p>:last-child>:last-child, p>:last-child>:last-child>:last-child, pre:last-child, pre>:last-child, pre>:last-child>:last-child, pre>:last-child>:last-child>:last-child {
@@ -1412,18 +1230,8 @@ blockquote, h1, h2, h3, h4, h5, h6, p, pre {
 body, h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
-body * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
+
+
 user agent stylesheet
 p {
     display: block;
@@ -1476,25 +1284,8 @@ html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-body ::selection {
-    background: rgba(164,228,245,.4);
-}
+
+
 
 
 /* element.style {
@@ -1517,19 +1308,10 @@ body ::selection {
     box-shadow: none;
     border-radius: 4px 4px 0 0;
 }
-body * {
+/* body * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-}
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-user agent stylesheet
+} */
 div {
     display: block;
 }
@@ -1577,22 +1359,7 @@ html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
 }
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-*, :after, :before {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, :after, :before {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
+
 body ::selection {
     background: rgba(164,228,245,.4);
 }

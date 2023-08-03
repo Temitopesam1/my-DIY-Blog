@@ -16,11 +16,12 @@ const UserSchema = new mongoose.Schema({
     lastName: {
         type: String
     },
-    Image: {
+    image: {
         type: String
     },
     password: {
-        type: String, required: true, trim: true, minlength: 7,
+        type: String, trim: true,
+        minlength:  [7, 'Password must be at least 7 characters long'],
         validate(value){
             if(validator.isEmpty(value)){
                 throw new Error('Please enter your password!')
@@ -33,6 +34,7 @@ const UserSchema = new mongoose.Schema({
     },
     email: {
         type: String,
+        required: true,
         unique:true,
         trim: true,
         validate(value){
