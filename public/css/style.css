@@ -24,6 +24,74 @@
 /* Add styles for the Font Awesome icons */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css');
 
+@media (max-width: 46.24em){
+.app_content__Kl-ZQ {
+    padding: 25px;
+}
+}
+
+.app_content__Kl-ZQ {
+    padding: 40px;
+}
+
+.reset-password-email_container__2YxK1 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 620px;
+    text-align: center;
+}
+
+@media (max-width: 46.24em){
+.reset-password-email_card__yPZMJ {
+    padding: 25px;
+}
+}
+
+.form-header_header__UhqWw, .form-header_subheader__2ATHb {
+    text-align: center;
+    color: #0b0b0b;
+    font-family: "PolySans",sans-serif;
+    font-weight: 400;
+    line-height: 42px;
+    line-height: 2.625rem;
+}
+
+.form-header_header__UhqWw {
+    font-size: 32px;
+    font-size: 2rem;
+}
+blockquote, h1, h2, h3, h4, h5, h6, p, pre {
+    margin-bottom: 1.5rem;
+}
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+blockquote, h1, h2, h3, h4, h5, h6, p, pre {
+    margin-bottom: 1.5rem;
+}
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+.form-header_description__2ic93 {
+    color: #0b0b0b;
+    margin: 15px 0;
+    text-align: center;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 26px;
+    line-height: 1.625rem;
+}
+
+.form_alerts__2mutj {
+    margin-bottom: 20px;
+}
+
+.reset-password-email_card__yPZMJ {
+    background: #fff;
+    padding: 80px;
+    border-radius: 4px;
+}
 
 body, h1, h2, h3, h4, h5, h6, p, i {
     margin: 0;

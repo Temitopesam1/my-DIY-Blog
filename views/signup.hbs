@@ -67,28 +67,19 @@
     <div>
         <div>
             <div></div>
-            {{#if errors.length}}
+
+            {{#if message}}
                 <div style="color: red; font-weight: bold;">
-                    <ul>
-                        {{#each errors}}
-                           <li>
-                                {{#contains this "Password"}}
-                                    😬 Oops! {{this}}
-                                {{else}}
-                                    😕 {{this}}
-                                {{/contains}}
-                            </li>
-                        {{/each}}
-                    </ul>
+                    😬 Oops! {{message}}
                 </div>
             {{/if}}
 
-            <form action="/" method="post">
+            <form action="/auth/" method="post">
                 <fieldset class="vds-form-fieldset">
                     <legend class="vds-form-fieldset__title"></legend>
                     <div class="vds-text-input">
                         <label class="vds-text-input__label vds-visually-hidden" for="user-name">UserName</label>
-                        <input class="vds-text-input__input" id="user-name" name="displayName" placeholder="User Name" required="" type="text" value="">
+                        <input class="vds-text-input__input" id="user-name" name="displayName" placeholder="UserName" required="" type="text" value="">
                     </div>
                     <div class="vds-text-input">
                         <label class="vds-text-input__label vds-visually-hidden" for="email">Email Address</label>
