@@ -8,10 +8,8 @@ const session = require("express-session")
 const MongoStore = require("connect-mongo")
 const connectDB = require("./config/db")
 const exphbs = require("express-handlebars")
-const helpers = require('./helpers/helper');
+const flash = require('connect-flash');
 
-// Register the custom Handlebars helper
-helpers.registerHelper();
 
 
 
@@ -72,6 +70,7 @@ app.use(session({
 // Passport middleware
 app.use(passport.initialize())
 app.use(passport.session())
+app.use(flash());
 
 // Set global variable
 app.use((req, res, next) => {
