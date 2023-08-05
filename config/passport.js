@@ -6,6 +6,7 @@ const User = require('../models/User')
 require('./googleStrategy')(passport);
 require('./localLoginStrategy')(passport);
 require('./localSignupStrategy')(passport);
+require('./localPassResetStrategy')(passport);
 
 module.exports = function (passport) {
     // Serialize and deserialize user to support persistent sessions (optional but recommended)
