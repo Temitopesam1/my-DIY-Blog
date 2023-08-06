@@ -19,6 +19,10 @@ const UserSchema = new mongoose.Schema({
     image: {
         type: String
     },
+    verified: {
+        type: Boolean,
+        default : false
+    },
     password: {
         type: String, trim: true,
         minlength:  [7, 'Password must be at least 7 characters long'],

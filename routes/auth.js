@@ -24,7 +24,7 @@ router.post('/login', passport.authenticate('local-login', {
 }));
 
 router.post('/', passport.authenticate('local-signup', {
-  successRedirect: '/dashboard',
+  successRedirect: '/confirm-email',
   failureRedirect: '/',
   failureFlash: true
 }));

@@ -68,9 +68,15 @@
         <div>
             <div></div>
 
-            {{#if message}}
+            {{#if message.length}}
                 <div style="color: red; font-weight: bold;">
-                    😬 Oops! {{message}}
+                    <ul>
+                        {{#each message}}
+                            <li>
+                                😬 Oops! {{this}}
+                            </li>
+                        {{/each}}
+                    </ul>
                 </div>
             {{/if}}
 
@@ -79,7 +85,7 @@
                     <legend class="vds-form-fieldset__title"></legend>
                     <div class="vds-text-input">
                         <label class="vds-text-input__label vds-visually-hidden" for="user-name">UserName</label>
-                        <input class="vds-text-input__input" id="user-name" name="displayName" placeholder="UserName" required="" type="text" value="">
+                        <input class="vds-text-input__input" id="user-name" name="displayName" placeholder="User Name" required="" type="text" value="">
                     </div>
                     <div class="vds-text-input">
                         <label class="vds-text-input__label vds-visually-hidden" for="email">Email Address</label>

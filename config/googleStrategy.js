@@ -7,7 +7,7 @@ module.exports = function (passport) {
       {
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL: 'https://mystorybook.onrender.com/auth/google/callback',
+        callbackURL: process.env.URL,
         scope: ['profile', 'email'],
         access_type: 'online',
         response_type: 'code'

@@ -27,6 +27,14 @@ router.get("/login", ensureGuest, (req, res) => {
     })
 })
 
+// @desc    Login
+// @route   GET /
+router.get("/confirm-email", ensureAuth, (req, res) => {
+    res.render("mailConf", {
+        layout: "login",
+    })
+})
+
 // @desc    reset-password-email
 // @route   GET /
 router.get("/reset-password-email", ensureGuest, (req, res) => {
@@ -52,7 +60,44 @@ router.get("/dashboard", ensureAuth, async (req, res) => {
         name: req.user.displayName,
         stories
     })
-}) 
+})
+
+
+// @desc    reset-password
+// @route   POST /
+router.get("/confirm-mail", ensureAuth, async(req, res)=>{
+
+    const { token, user } = req.query;
+    
+    try{
+        let userToken = await Token.findOne({userId: user});
+        if (userToken) {
+            const isValid = bcrypt.compare(token, userToken.token);
+            if (isValid) {
+                let  userData = await User.findById(user);
+                if (userData){
+                    userData.verified = true;
+                    await userData.save();
+                    const mail = sendEmail(
+                        userData.email,
+                        "Account Created Successfully",
+                        {
+                            name: userData.displayName,
+                        },
+                        "../views/welcome.hbs"
+                    );
+                    if (mail){
+                        await userToken.remove();
+                        res.redirect('/dashboard');
+                    }
+                }
+            }
+        }
+    } catch(error){
+        console.log(error);
+        res.render("error/500")
+    }
+})
 
 
 
