@@ -11,8 +11,6 @@ const exphbs = require("express-handlebars")
 const flash = require('connect-flash');
 
 
-
-
 // load config
 dotenv.config({ path: "./config/conf.env" })
 

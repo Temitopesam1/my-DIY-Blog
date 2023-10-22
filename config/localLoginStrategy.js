@@ -15,7 +15,7 @@ module.exports = function (passport) {
               let user = await User.findOne({ email })
 
               if (user){
-                if (user.verified == false){
+                if (!user.verified){
                   done(null, false, req.flash('loginMessage', 'Account Not Verified! Try registering again.'));
                   user.deleteOne();
                 } else {
@@ -27,9 +27,15 @@ module.exports = function (passport) {
                   }
                 }
               }
-            } catch (err) {
-              console.error(err)
               done(null, false, req.flash('loginMessage', 'Email Or Password Invalid!'));
+            } catch (error) {
+              if (error.name === 'ValidationError') {
+                const errors = Object.values(error.errors).map((err) => err.message);
+                done(null, false, req.flash('loginMessage', errors ));
+            } else {
+                console.log(error)
+                done(null, false, req.flash('loginMessage', error));
+            }
             }
         }
     )

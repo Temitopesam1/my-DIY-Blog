@@ -26,18 +26,17 @@ module.exports = function (passport) {
                     let token = await Token.findOne({ userId: user._id });
                     if (token) {
                         await token.deleteOne()
-                    } else {
-                        // Generate a password reset token
-                        token = crypto.randomBytes(20).toString('hex');
-                        await new Token({
-                            userId: user._id,
-                            token,
-                        }).save();
                     }
+                    // Generate account verification token
+                    token = crypto.randomBytes(256).toString('hex');
+                    await new Token({
+                        userId: user._id,
+                        token,
+                    }).save();
                 
-                    // Send the password reset email
+                    // Send the verification email
                     const link = `${process.env.LINK}/confirm-mail?token=${token}&user=${user._id}`;
-                    sendEmail(user.email, "Mail Confirmation", { name: user.displayName, link }, "../views/confMail.hbs");
+                    await sendEmail(user.email, "Mail Confirmation", { name: user.displayName, link }, "../views/confMail.hbs");
                     done(null, user);
                 }
             } catch (error) {

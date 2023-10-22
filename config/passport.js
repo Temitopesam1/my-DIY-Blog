@@ -4,6 +4,7 @@ const User = require('../models/User')
 
 // Load GoogleStrategy and LocalStrategy configurations
 require('./googleStrategy')(passport);
+require('./facebookStrategy')(passport);
 require('./localLoginStrategy')(passport);
 require('./localSignupStrategy')(passport);
 require('./localPassResetStrategy')(passport);

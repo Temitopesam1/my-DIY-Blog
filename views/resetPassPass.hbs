@@ -1,0 +1,29 @@
+<div class="app_content__Kl-ZQ" role="main"><div class="reset-password-email_container__2YxK1"><div class="reset-password-email_card__yPZMJ"><div><h1 class="form-header_header__UhqWw">Reset your password</h1><i class="form-header_description__2ic93">Please provide the password you wish to continue using with your MyStoryBook account.</i></div><div class="reset-password-email_alert__i3dsO"><div class="alert_success__1bTs6 alert__alert__nhpvN alert_hidden__2ikXu"><div class="alert_hidden__2ikXu"><a></a></div></div></div><div class="reset-password-email_alert__i3dsO"><div class="alert_error__3rDC3 alert__alert__nhpvN alert_hidden__2ikXu"><div class="alert_hidden__2ikXu"><a></a></div></div></div><div><div></div><div class="form_alerts__2mutj"><div><div class="alert_success__1bTs6 alert__alert__nhpvN alert_hidden__2ikXu"><div class="alert_hidden__2ikXu"><a></a></div></div></div><div><div class="alert_error__3rDC3 alert__alert__nhpvN alert_hidden__2ikXu"><div class="alert_hidden__2ikXu"><a></a></div></div></div></div>{{#if message}}
+                <div style="color: red; font-weight: bold;">
+                    😬 Oops! {{message}}
+                </div>
+            {{/if}}
+            <form action="/auth/reset-password" method="post">
+                <fieldset class="vds-form-fieldset">
+                    <legend class="vds-form-fieldset__title"></legend>
+                    <label class="vds-text-input__label vds-visually-hidden" for="email">Email Address</label><input class="vds-text-input__input" data-testid="signin-email" id="email" name="email" value="{{email}}" required="" type="text" value=""></div>
+                    <div class="revealable-password_revealable_password__14MVz">
+                        <div class="password-creator_password_creator__34Yr8">
+                            <div class="revealable-password_revealable_password__14MVz">
+                                <div class="vds-text-input">
+                                    <label class="vds-text-input__label vds-visually-hidden" for="revealable-password">Password</label>
+                                    <input class="vds-text-input__input" id="revealable-password" name="password" placeholder="Password" required="" type="password" value="">
+                                </div>
+                                      
+                                                        
+                                <span class="revealable-password_icon_container__1qdtE" onclick="togglePasswordVisibility()">
+                                    <i class="fa fa-eye" id="eyeIcon"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="vds-button vds-button--primary" type="submit">
+                        <span class="vds-button__content">Update Password</span>
+                    </button>
+                </fieldset>
+            </form>

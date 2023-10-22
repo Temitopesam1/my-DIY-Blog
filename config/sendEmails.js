@@ -19,20 +19,14 @@ const sendEmail = async (email, subject, payload, template) => {
         const source = fs.readFileSync(path.resolve(__dirname, template)).toString('utf8');
         const compiledTemplate = handlebars.compile(source, { noEscape: true });
         const options = {
-            from: process.env.EMAIL_USERNAME,
+            from: `"MyStoryBook" ${process.env.EMAIL_USERNAME}`,
             to: email,
             subject,
             html: compiledTemplate(payload),
         };
   
         // Send email
-        transporter.sendMail(options, (error) => {
-            if (error) {
-                return false;
-            } else {
-                return true;
-            }
-        });
+        transporter.sendMail(options);
     } catch (error) {
         return error;
     }
